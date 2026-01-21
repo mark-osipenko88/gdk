@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  max-bot:
+    build: .
+    container_name: max-chat-bot
+    restart: unless-stopped
+    environment:
+      - MAX_BOT_TOKEN=${MAX_BOT_TOKEN}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - ADMIN_IDS=${ADMIN_IDS}
+    volumes:
+      - ./bot_data.json:/app/bot_data.json
+      - ./logs:/app/logs
+    ports:
+      - "5000:5000"  # для webhook режима
+    networks:
+      - bot-network
+
+  # Опционально: Redis для кеширования
+  redis:
+    image: redis:7-alpine
+    container_name: max-bot-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local

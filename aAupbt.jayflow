@@ -1,0 +1,89 @@
+{
+  "snapshot": {
+    "nodes": [
+      {
+        "data": {
+          "model": "gpt-4.1-nano",
+          "processing": false,
+          "importing": false,
+          "configured": true,
+          "eco": true,
+          "width": 450,
+          "usage": {
+            "completion_tokens": 22,
+            "prompt_tokens": 21581,
+            "total_tokens": 21603,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 0,
+              "rejected_prediction_tokens": 0
+            },
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 21376
+            }
+          },
+          "value": [
+            {
+              "id": "69710b7430bba4a4bac226aa",
+              "text": "Пожалуйста, проверьте свой план подписки, чтобы продолжить использование функций создания изображений.",
+              "annotations": []
+            }
+          ],
+          "output": [
+            {
+              "id": "69710b710a71c50cb3dc4d7a",
+              "role": "assistant",
+              "files": [],
+              "content": [
+                {
+                  "id": "call_UIhb11g8cyBb7aeX2MzqqfFJ",
+                  "name": "create_image",
+                  "arguments": "{\"prompt\":\"a futuristic digital city at night with neon lights, high-tech buildings, and flying cars, in the style of cyberpunk, vibrant colors and glowing effects, detailed and immersive scene\"}"
+                }
+              ]
+            },
+            {
+              "id": "69710b7430bba4a4bac226a9",
+              "role": "user",
+              "content": [
+                {
+                  "tool_call_id": "call_UIhb11g8cyBb7aeX2MzqqfFJ",
+                  "output": "Error: User hasn't sufficient funds. Ask user to check subscription plan. Print message like: please check your subscription plan to continue. Print only this message and nothing else. This is IMPORTANT!"
+                }
+              ]
+            },
+            {
+              "id": "69710b7430bba4a4bac226aa",
+              "role": "assistant",
+              "files": [],
+              "content": [
+                {
+                  "text": "Пожалуйста, проверьте свой план подписки, чтобы продолжить использование функций создания изображений."
+                }
+              ],
+              "annotations": []
+            }
+          ],
+          "height": 460,
+          "manuallyResized": true
+        },
+        "type": "imageOutput",
+        "position": {
+          "x": -159,
+          "y": 866
+        },
+        "selected": true,
+        "id": "aAupbt",
+        "measured": {
+          "width": 450,
+          "height": 460
+        },
+        "width": 450,
+        "height": 460,
+        "resizing": false
+      }
+    ]
+  }
+}
